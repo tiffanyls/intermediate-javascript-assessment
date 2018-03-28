@@ -44,10 +44,15 @@ function noWeakLink() {
     url: '/api/users'
   })
   // CODE HERE...
-  .then(function(res){
-    
+  .then(function(response){
+    firstUser = response.data[0];
+    return response;
   })
-
+  .then(function(response){
+    thirdUser = response.data[2];
+    return response.data[9];
+  })
+  
 }
 
 
@@ -94,10 +99,8 @@ boundToElephant();
 // and return the bound function.
 
 // CODE HERE...
-var deathStar = function(){
-  this.capacity = this.crew;
-  this.crew = this.crew;
-  return deathStar;
+var deathStar = function(capacity, crew){
+  return capacity.bind(crew);
 }
 
 
@@ -115,7 +118,12 @@ var deathStar = function(){
 // The closure function will return the combined value of assets and liabilities.
 
 // CODE HERE...
+function accountingOffice(){
+  
+  }
 
+
+accountingOffice();
 
 
 // *************
