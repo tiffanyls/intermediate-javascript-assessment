@@ -118,12 +118,12 @@ var deathStar = function(capacity, crew){
 // The closure function will return the combined value of assets and liabilities.
 
 // CODE HERE...
-function accountingOffice(){
-  
+function accountingOffice(assets){
+  return function (liabilities){
+    return assets + liabilities;
+  }
   }
 
-
-accountingOffice();
 
 
 // *************
@@ -148,6 +148,16 @@ accountingOffice();
 // };
 
 // CODE HERE...
+function forgetter(name){
+  items = {
+    name: name,
+    remember: []
+  }
+  return function rememberall(item){
+    items.remember.push(item);
+      return items;
+    }
+  }
 
 
 
@@ -176,3 +186,6 @@ accountingOffice();
 // NOTE: Neither hunger nor danger should be able to exceed 100 or drop below 0.
 
 // CODE HERE...
+function frodo(){
+
+}
