@@ -152,8 +152,16 @@ return newString;
 
 // CODE HERE...
 
-function valueType (param, param){
-
+function valueType (param1, param2){
+  if (param1 === param2 && typeof param1 === typeof param2){
+    return "Exactly the same";
+  }
+  else if (param1 == param2 && typeof param1 !== typeof param2) {
+    return "Same value, different types"
+  }
+  else {
+    return "Different values"
+  }
 }
 
 // *************
@@ -168,3 +176,10 @@ function valueType (param, param){
 var theAnswer = "Unknown";
 
 // CODE HERE...
+function promiseCatcher(param){
+  param.then(function(results){
+  theAnswer = results;
+  console.log(results);
+  return results;
+})}
+
