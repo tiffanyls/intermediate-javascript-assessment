@@ -43,27 +43,27 @@ function daBears(){
 // Which function(s) access the "chair" variable and get "Too Big!"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale1 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale1 = ["papaBear", "mamaBear"];
 
 // Which function(s) access the "feeling" variable and get "Hungry"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale2 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale2 = ["goldilocks"];
 
 // Which function(s) access the "porridge" variable and get "Too Cold!"
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale3 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale3 = ["mamaBear"];
 
 // Which function(s) access the "sleepy" variable and get undefined
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale4 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale4 = ["daBears", "papaBear", "mamaBear", "goldilocks"];
 
 // Which function(s) access the isFurry variable and get true
 // (Delete wrong answers, leave correct ones)
 
-var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
+var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear"];
 
 
 // *************
@@ -81,8 +81,21 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 // the other called "mustang".  Using implicit context, invoke the drive method on
 // "charger" once, and invoke it twice on "mustang".
 
-// CODE HERE...
+function Vehicle(){
+  this.gasRemaining = 100;
+}
 
+Vehicle.prototype.drive = function(){
+  return this.gasRemaining = this.gasRemaining-25;
+  
+}
+
+var charger = new Vehicle();
+var mustang = new Vehicle();
+
+charger.drive();
+mustang.drive();
+mustang.drive();
 
 
 
@@ -108,8 +121,20 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 
 
 // CODE HERE...
+String.prototype.grammarPolice = function(){
+  newString = this.toLowerCase().split(" ");
 
 
+for(var i = 0; i < newString.length; i++){
+  newString[i] = newString[i].charAt(0).toUpperCase() + newString[i].substring(1);
+}
+
+newString = newString.join(" ");
+
+return newString;
+};
+
+"OH HELLO THERE".grammarPolice();
 
 // *************
 // * PROBLEM 4 *
@@ -127,7 +152,9 @@ var fairyTale5 = ["daBears", "papaBear", "mamaBear", "babyBear", "goldilocks"];
 
 // CODE HERE...
 
+function valueType (param, param){
 
+}
 
 // *************
 // * PROBLEM 5 *
